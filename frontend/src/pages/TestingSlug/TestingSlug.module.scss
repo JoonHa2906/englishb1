@@ -1,0 +1,318 @@
+.content {
+    color: #2b2c48;
+    display: flex;
+    width: 100%;
+    padding: 0 8px 12px;
+    ::-webkit-scrollbar {
+        display: none;
+    }
+    z-index: 1;
+    --left: 26px;
+}
+
+.card {
+    margin: auto;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    overflow-x: hidden;
+    background-color: white;
+    display: flex;
+    transition: 0.3s;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: 0 0 0 8px rgba(255, 255, 255, 0.2);
+}
+
+.card-header {
+    display: flex;
+    height: 240px;
+    flex-shrink: 0;
+    width: 100%;
+    transition: 0.3s;
+    background: linear-gradient(to top right, #cc3300 0%, #009 100%);
+    transition: 0.3s;
+}
+.header-logo {
+    width: 230px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo {
+    display: flex;
+    width: 180px;
+    height: 180px;
+}
+.header-info {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.card-title {
+    padding: 18px 0 12px;
+    color: #eee;
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    font-family: 'Fredoka One', sans-serif;
+}
+.card-time {
+    padding-bottom: 12px;
+    font-size: 2.1rem;
+    font-weight: 700;
+    text-align: center;
+    font-family: 'Fredoka One', sans-serif;
+    color: rgb(243, 243, 11);
+}
+.card-action {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 18px;
+    .countdown {
+        color: #f7ceb3;
+        font-size: 2.5rem;
+        margin-right: 18px;
+    }
+    .button {
+        padding: 6px 24px;
+        min-width: 170px;
+        text-align: center;
+        border-radius: 50px;
+        font-size: 2rem;
+        font-weight: 700;
+        font-family: 'Fredoka One', sans-serif;
+        transition: 0.3s;
+    }
+    .register {
+        background-color: #fff;
+        color: #00008b;
+        border: 2px solid #00008b;
+        cursor: pointer;
+        &:hover {
+            background-color: #00008b;
+            color: #fff;
+        }
+    }
+    .registered {
+        background-color: #00008b;
+        color: #fff;
+        border: 2px solid #00008b;
+        cursor: default;
+    }
+    .start {
+        background-color: #fff;
+        color: #14b30f;
+        border: 2px solid #14b30f;
+        cursor: pointer;
+        &:hover {
+            background-color: #14b30f;
+            color: #fff;
+        }
+    }
+    .finish {
+        background-color: #ddd;
+        color: #444;
+        border: 2px solid #888;
+        cursor: not-allowed;
+    }
+}
+.card-main {
+    position: relative;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.card-buttons {
+    display: flex;
+    background-color: #fff;
+    justify-content: center;
+    width: 100%;
+}
+.card-content {
+    padding: 20px;
+}
+.card-subtitle {
+    font-weight: 700;
+    font-size: 1.7rem;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    font-family: 'Fredoka One', sans-serif;
+}
+
+.card-desc {
+    line-height: 1.6;
+    color: #636b6f;
+    font-size: 1.6rem;
+    margin: 0;
+    font-weight: 400;
+}
+
+.card-buttons button {
+    flex: 1 1 auto;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background: 0;
+    font-size: 1.5rem;
+    border: 0;
+    padding: 15px 5px;
+    cursor: pointer;
+    color: #5c5c6d;
+    transition: 0.3s;
+    font-weight: 500;
+    outline: 0;
+    border-bottom: 3px solid transparent;
+    font-family: 'Fredoka One', sans-serif;
+}
+.card-buttons button.is-active,
+.card-buttons button:hover {
+    color: #2b2c48;
+    border-bottom: 3px solid #8a84ff;
+    background: linear-gradient(
+        to bottom,
+        rgba(127, 199, 231, 0) 0%,
+        rgba(207, 204, 255, 0.2) 44%,
+        rgba(211, 226, 255, 0.4) 100%
+    );
+}
+
+.card-section {
+    display: none;
+}
+.test-info {
+    font-size: 1.6rem;
+    text-align: justify;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #225;
+    br {
+        display: block;
+        margin-bottom: 6px;
+        content: '';
+    }
+}
+.card-section.is-active {
+    display: block;
+    -webkit-animation: fadeIn 0.6s both;
+    animation: fadeIn 0.6s both;
+}
+
+.card-contact-wrapper {
+    margin-top: 20px;
+}
+
+.card-contact {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    color: #444;
+    line-height: 1.6;
+    cursor: pointer;
+}
+@media (max-width: 767px) {
+    .header-logo {
+        display: none;
+    }
+}
+@media (min-width: 600px) {
+    .card-buttons {
+        width: 500px;
+        button {
+            text-transform: uppercase;
+        }
+    }
+    .card-title {
+        font-size: 4rem;
+    }
+    .card-time {
+        font-size: 2.9rem;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translatey(40px);
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translatey(40px);
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.rank {
+    display: flex;
+    align-items: center;
+}
+.avt {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    margin-right: 8px;
+    padding: 2px;
+    border: 1.5px solid #333;
+    font-size: 1rem;
+    position: relative;
+}
+.info-user {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.name-user {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
+    -webkit-box-orient: vertical;
+    font-size: 1.6rem;
+    color: #222;
+}
+.rank-user {
+    font-weight: 700;
+    font-size: 2rem;
+    span {
+        font-family: 'Fredoka One', sans-serif;
+    }
+}
+.one {
+    color: #ffb40b;
+}
+.two {
+    color: #86918c;
+}
+.three {
+    color: #ce7d32;
+}
+.rank-default {
+    .rank-icon {
+        display: none;
+    }
+    color: #555;
+}
+.card-rank {
+    font-weight: 700;
+    color: #cc3300;
+    padding-bottom: 12px;
+    font-size: 1.7rem;
+}

@@ -1,0 +1,551 @@
+.card {
+    padding: 15px;
+    margin-bottom: 20px;
+    width: 100%;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    border-radius: 8px;
+    background: linear-gradient(to top right, #ffccff 0%, #ccffcc 100%);
+    &:hover {
+        background: linear-gradient(to top right, #66ff99 0%, #ff99cc 100%);
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
+            rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+    }
+    &:hover .image {
+        transform: scale(1.2);
+        -webkit-transform: scale(1.2);
+    }
+    transition: all 0.3s linear;
+    display: flex;
+    min-height: 170px;
+    align-items: center;
+}
+.box {
+    width: 150px;
+    height: 150px;
+    border-radius: 6px;
+    overflow: hidden;
+    margin-right: 24px;
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    border-radius: 6px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.header {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    .content {
+        display: inline-flex;
+        width: 100%;
+        align-items: center;
+        .rank + .rank {
+            margin-left: 28px;
+        }
+        .rank {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .avt {
+                width: 44px;
+                height: 44px;
+                border-radius: 50%;
+                margin-right: 8px;
+                padding: 2px;
+                border: 1.5px solid #333;
+                font-size: 1rem;
+                position: relative;
+            }
+            .info-user {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                .name-user {
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 1;
+                    line-clamp: 1;
+                    -webkit-box-orient: vertical;
+                    font-size: 1.6rem;
+                    color: #222;
+                }
+                .rank-user {
+                    font-weight: 700;
+                    font-size: 2rem;
+                    span {
+                        font-family: 'Fredoka One', sans-serif;
+                    }
+                }
+                .one {
+                    color: #ffb40b;
+                }
+                .two {
+                    color: #86918c;
+                }
+                .three {
+                    color: #ce7d32;
+                }
+            }
+        }
+    }
+}
+.title {
+    display: flex;
+    font-size: 2.5rem;
+    line-height: 1.5;
+    color: #00008b;
+    font-weight: 700;
+    padding: 10px 0px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+.info {
+    display: flex;
+    align-items: center;
+    font-size: 1.4rem;
+    color: #333;
+    padding: 10px 0;
+}
+.date {
+    margin-right: 24px;
+}
+.author {
+    margin-right: 24px;
+}
+.ratting {
+    display: flex;
+    align-items: center;
+}
+.count-user {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    .icon-user {
+        font-size: 2.5rem;
+        color: #00008b;
+    }
+    .count {
+        font-size: 1.8rem;
+        font-family: 'Fredoka One', sans-serif;
+        color: #002299;
+    }
+}
+.count-user-sm {
+    display: none;
+}
+.action {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .countdown {
+        text-align: center;
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: #0c940c;
+        margin-bottom: 4px;
+    }
+    .button {
+        padding: 6px 24px;
+        min-width: 160px;
+        text-align: center;
+        border-radius: 50px;
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
+    .register {
+        background-color: #fff;
+        color: #00008b;
+        border: 2px solid #00008b;
+        cursor: pointer;
+        &:hover {
+            background-color: #00008b;
+            color: #fff;
+        }
+    }
+    .registered {
+        background-color: #00008b;
+        color: #fff;
+        border: 2px solid #00008b;
+        cursor: default;
+    }
+    .start {
+        background-color: #fff;
+        color: #14b30f;
+        border: 2px solid #14b30f;
+        cursor: pointer;
+        &:hover {
+            background-color: #14b30f;
+            color: #fff;
+        }
+    }
+    .finish {
+        background-color: #ddd;
+        color: #444;
+        border: 2px solid #888;
+        cursor: not-allowed;
+    }
+}
+.expired-notice {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3px 6px;
+    border: 1px solid #ebebeb;
+    margin-bottom: 6px;
+    border-radius: 4px;
+}
+
+.expired-notice > span {
+    font-size: 1.7rem;
+    font-weight: bold;
+    color: red;
+}
+
+.show-counter {
+    padding: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.show-counter .countdown {
+    line-height: 1.1;
+    padding: 0 4px 0 4px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.show-counter .countdown.danger {
+    color: #ff0000;
+}
+
+.show-counter .countdown > p {
+    margin: 0;
+    font-family: 'Fredoka One', sans-serif;
+}
+
+.show-counter .countdown > span {
+    text-transform: uppercase;
+    font-family: 'Fredoka One', sans-serif;
+    font-size: 0.75rem;
+    line-height: 1.1;
+}
+
+@media (max-width: 1119px) {
+    .title {
+        font-size: 2.4rem;
+    }
+    .header {
+        .content {
+            .rank + .rank {
+                margin-left: 30px;
+            }
+            .rank {
+                .avt {
+                    width: 35px;
+                    height: 35px;
+                    margin-right: 7px;
+                }
+                .info-user {
+                    .name-user {
+                        font-size: 1.6rem;
+                    }
+                    .rank-user {
+                        font-size: 1.8rem;
+                    }
+                }
+            }
+        }
+    }
+    .count-user {
+        padding: 24px;
+        .icon-user {
+            font-size: 2.3rem;
+        }
+        .count {
+            font-size: 1.9rem;
+        }
+    }
+    .action {
+        .button {
+            padding: 5px 20px;
+            font-size: 1.5rem;
+            min-width: 158px;
+        }
+    }
+}
+@media (max-width: 991px) {
+    .box {
+        display: none;
+    }
+    .title {
+        font-size: 2.3rem;
+    }
+    .header {
+        .content {
+            .rank + .rank {
+                margin-left: 25px;
+            }
+            .rank {
+                .avt {
+                    width: 32px;
+                    height: 32px;
+                    margin-right: 6px;
+                }
+                .info-user {
+                    .name-user {
+                        font-size: 1.5rem;
+                    }
+                    .rank-user {
+                        font-size: 1.8rem;
+                    }
+                }
+            }
+        }
+    }
+    .count-user {
+        padding: 20px;
+        .icon-user {
+            font-size: 2.2rem;
+        }
+        .count {
+            font-size: 1.8rem;
+        }
+    }
+    .action {
+        .button {
+            padding: 5px 18px;
+            font-size: 1.4rem;
+            min-width: 158px;
+        }
+    }
+}
+@media (max-width: 767px) {
+    .card {
+        min-height: 150px;
+        line-height: 1.4;
+    }
+    .title {
+        font-size: 1.8rem;
+        line-height: 1.4;
+    }
+
+    .date,
+    .ratting,
+    .avt {
+        display: none;
+    }
+    .header {
+        .content {
+            .rank + .rank {
+                margin-left: 20px;
+            }
+            .rank {
+                .info-user {
+                    .name-user {
+                        font-size: 1.3rem;
+                    }
+                    .rank-user {
+                        font-size: 1.6rem;
+                    }
+                }
+            }
+        }
+    }
+    .info {
+        font-size: 1.3rem;
+    }
+    .action {
+        margin-left: 6px;
+        .countdown {
+            font-size: 1.3rem;
+        }
+        .button {
+            padding: 4px 14px;
+            min-width: 120px;
+            font-size: 1.4rem;
+        }
+    }
+
+    //Countdown
+    .expired-notice {
+        padding: 3px;
+        border-radius: 2px;
+    }
+
+    .expired-notice > span {
+        font-size: 1.4rem;
+        font-weight: bold;
+        color: red;
+    }
+
+    .expired-notice > p {
+        font-size: 1.5rem;
+    }
+
+    .show-counter {
+        padding: 3px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .show-counter .countdown {
+        line-height: 1.1;
+        padding: 0 2px 0 2px;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .show-counter .countdown.danger {
+        color: #ff0000;
+    }
+
+    .show-counter .countdown > p {
+        margin: 0;
+    }
+
+    .show-counter .countdown > span {
+        text-transform: uppercase;
+        font-size: 0.6rem;
+        line-height: 0.8;
+    }
+    .count-user {
+        display: none;
+    }
+    .count-user-sm {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 6px;
+        .icon-user {
+            font-size: 2rem;
+            color: #00008b;
+            line-height: 1.2;
+        }
+        .count {
+            font-size: 1.5rem;
+            font-family: 'Fredoka One', sans-serif;
+            color: #002299;
+            line-height: 1.2;
+        }
+    }
+}
+@media (max-width: 450px) {
+    .card {
+        min-height: 160px;
+        line-height: 1.3;
+    }
+    .title {
+        font-size: 1.6rem;
+        line-height: 1.2;
+    }
+    .header {
+        .content {
+            .rank + .rank {
+                margin-left: 8px;
+            }
+        }
+    }
+    .info {
+        font-size: 1.3rem;
+    }
+    .action {
+        margin-left: 6px;
+        .countdown {
+            font-size: 1.3rem;
+        }
+        .button {
+            padding: 4px 14px;
+            min-width: 106px;
+            font-size: 1.4rem;
+        }
+    }
+
+    //Countdown
+    .expired-notice {
+        border-radius: 2px;
+        line-height: 0.8;
+    }
+
+    .expired-notice > span {
+        font-size: 1.4rem;
+        font-weight: bold;
+        color: red;
+        line-height: 0.8;
+    }
+
+    .show-counter {
+        padding: 3px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        line-height: 0.8;
+    }
+
+    .show-counter .countdown {
+        padding: 0 1px 0 1px;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .show-counter .countdown.danger {
+        color: #ff0000;
+    }
+
+    .show-counter .countdown > p {
+        margin: 0;
+    }
+
+    .show-counter .countdown > span {
+        text-transform: uppercase;
+        font-size: 0.52rem;
+    }
+    .count-user {
+        display: none;
+    }
+    .count-user-sm {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 6px;
+        .icon-user {
+            font-size: 2rem;
+            color: #00008b;
+            line-height: 1.2;
+        }
+        .count {
+            font-size: 1.5rem;
+            font-family: 'Fredoka One', sans-serif;
+            color: #002299;
+            line-height: 1.2;
+        }
+    }
+}
+.action {
+    .finish,
+    .finish:hover {
+        cursor: no-drop;
+        color: #fff;
+        background-color: #888;
+        border: 2px solid #888;
+    }
+}

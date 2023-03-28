@@ -1,0 +1,154 @@
+.content {
+   font-size: 1.7rem;
+   font-weight: 500;
+   transition: all 0.3s ease;
+}
+.action {
+   padding: 8px 12px;
+   background-color: #faded7;
+   border-radius: 5px;
+   margin: 20px 0px 24px;
+}
+.game {
+   border-radius: 5px;
+   margin: 20px 0px 24px;
+   padding: 24px 20px 12px 20px;
+   background: url('https://firebasestorage.googleapis.com/v0/b/doantotnghiep-379304.appspot.com/o/game%2Fanimal%2Fbackground.jpg?alt=media');
+   border-radius: 20px;
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: top;
+   overflow: hidden;
+   position: relative;
+   transition: all 0.3s ease;
+}
+.endgame {
+   position: absolute;
+   top: 0;
+   left: 0;
+   bottom: 0;
+   right: 0;
+   z-index: 2;
+   background: url('https://lh3.googleusercontent.com/WrLyOUwu2myvyrM4F1OsYnoht6bvu2FygwM5ZkqStdMIkLKJ3Sb0YRegBbXcxbLtrTUk1zJn6nOYoDCkoKujayhME_Tslipzz-FLoUxJLBaYxM8jcSrgAOJC82Ixbo5MX1QxTJKGolgLDJrBRKnmI82pITZyIUXJkSEff9METgfKyy7efmPsKkJiaiGkwkVIad1fiKCPb_1WV7y1JFeT9YJXNrmr5xNT9_DQHiCs8iOWSXe1zyHlHzcCoCBaxnVI15sVyvpylNMb0RqF-ROJZRwTqF__cHmYTQ574axC1KPP1yuJKLdwN2lHOyu54ST19-KHZ05AfhtpNUBBiXySwCk-2AHxDUycLKM8XuZ1LvjikGneQdxdmvkULzNFtSgjqmPcuhDI-WDqWgpfVursPDqR3bnskTuEltf9EKOGqr-2iQfGMx7r4sk2QeBYHtfmsLbqpd1jNzVXHICoBYq-6KqZhcASNzmtY_7Ais2n00AbRf0Oeh3R-_tWixmITdtnvPNWn2n3-NIhyF3NkSPgHDwOLXDilPHix4AVB9PyWWRJHVRAaqZOut-q_JQLml9LGLbpVj5ZhKf2yDTG27uQVE9e75svn_4X2YaCWZB7KFJw02zn5_emx_5QfRc6WfzUzyUA357_cxUgJF8g3wR6hWjCdTaruY5v_QsK7An1xsncL_JEjTyDI4ft9Kihvil5TXurEJjHapFZE8_-2bSzs29IFoZ3GAVULWEVA3d7If5mo-sebjkJ11Yt2Cy4lwVjPzkHeXsgU87T2RdPHotA4PO64Z2w2wI3RStiZAFRnvyFdfXw0xYeVFeWn8zsfACWp3Fu8KttfvUM9OZo9F5WKdnPLVEaRi6oPfd2kWMGiJoG2RQOzrMHSab3U48NotCpkXwtnCcyZWADfvC_gkJ3_-nJbFYu8Hgurads9XI2dTIv4hqoV-kTyYNIt0Qd0g5NHe7XcKcUe2yQyzH2d9skp9BmRj9pTvwBCwNpIZWI6IiI5SDy5NP0v6kyeRtDnZvICLWYuXgdKQRFOs5YS9K-o9wJSCsahlI3p_WrJEGFRubptfV7PIWuFgo14_j5QtzwHyD2dA3ZUB0RjYFtsVPN5fLBWA5sOAiOFg=w750-h469-no?authuser=0');
+   border-radius: 20px;
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: top;
+   overflow: hidden;
+   transition: all 0.3s ease;
+}
+.complete {
+   font-family: 'Fredoka One', sans-serif;
+   font-size: 5rem;
+   font-weight: 700;
+   color: #f44;
+   position: absolute;
+   top: 20%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   z-index: 4;
+   transition: all 0.3s ease;
+}
+.complete2 {
+   font-family: 'Fredoka One', sans-serif;
+   font-size: 5rem;
+   font-weight: 700;
+   color: rgb(231, 228, 20);
+   position: absolute;
+   top: calc(20% - 2px);
+   left: calc(50% - 2px);
+   transform: translate(-50%, -50%);
+   z-index: 3;
+   transition: all 0.3s ease;
+}
+.button {
+   font-family: 'Fredoka One', sans-serif;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   padding: 1rem 4rem;
+   font-size: 5rem;
+   border-radius: 10rem;
+   font-weight: 700;
+   cursor: pointer;
+   background-color: #fff;
+   color: #140a75;
+   transition: all 0.3s ease;
+   &:hover {
+      background-color: #140a75;
+      color: #fff;
+   }
+}
+.pic,
+.words {
+   height: 100%;
+   transition: all 0.3s ease;
+}
+.main {
+   cursor: pointer;
+   overflow: hidden;
+   transition: all 0.3s ease;
+}
+
+.picture-item {
+   width: 100%;
+   border-radius: 12px;
+   padding: 12px;
+   margin-bottom: 8px;
+   background-color: #fff;
+   transition: all 0.3s ease;
+   box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+      rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset,
+      rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
+      rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
+      rgba(0, 0, 0, 0.09) 0px 32px 16px;
+   &:hover {
+      transform: scale(0.95);
+      border: 2px solid #ffb111;
+   }
+}
+.word-item {
+   width: 100%;
+   border-radius: 12px;
+   padding: 1.2rem;
+   background-color: #fff;
+   display: flex;
+   justify-content: center;
+   font-size: 1.5rem;
+   align-items: center;
+   font-weight: 700;
+   border: 2px solid rgba(0, 0, 0, 0.5);
+   color: #140a75;
+   transition: all 0.3s ease;
+   height: calc(100% - 1.4rem);
+   box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+      rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset,
+      rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
+      rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
+      rgba(0, 0, 0, 0.09) 0px 32px 16px;
+   &:hover {
+      transform: scale(0.95);
+      border: 2px solid #ffb111;
+   }
+}
+@media (max-width: 500px) {
+   .word-item {
+      font-size: 1.1rem;
+   }
+   .game {
+      border-radius: 8px;
+      padding: 12px 10px 6px 10px;
+   }
+}
+@media (max-width: 400px) {
+   .word-item {
+      font-size: 1rem;
+   }
+}
+
+@media (max-width: 350px) {
+   .word-item {
+      font-size: 0.9rem;
+   }
+}

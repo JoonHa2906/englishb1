@@ -1,0 +1,200 @@
+.search-result {
+   animation: fadeInBottom 0.3s ease;
+   background: transparent;
+   -webkit-tap-highlight-color: transparent;
+   border-radius: 10px;
+   box-shadow: 0 -4px 32px rgb(0 0 0 / 20%);
+   color: #1d2129;
+   margin: 0;
+   overflow: hidden;
+   transition: all 0.3s ease-in-out;
+   will-change: opacity, transform;
+}
+@keyframes fadeInBottom {
+   from {
+      opacity: 0;
+      transform: translateY(-10px);
+   }
+   to {
+      opacity: 1;
+      transform: translateY(0);
+   }
+}
+
+.search_header {
+   align-items: center;
+   position: relative;
+   display: flex;
+   margin: 6px;
+}
+.search-result-info-icon,
+.search-result-info-icon-loading {
+   font-size: 1.4rem;
+   display: flex;
+   align-items: center;
+}
+.search-result-info-icon-loading {
+   animation: spinner 0.8s linear infinite;
+}
+.search-result-info-title {
+   margin-left: 8px;
+   overflow: hidden;
+   white-space: nowrap;
+   text-overflow: ellipsis;
+}
+@keyframes spinner {
+   from {
+      transform: translateY(0%) rotate(0);
+   }
+   to {
+      transform: translateY(0%) rotate(360deg);
+   }
+}
+.search-item-header {
+   align-items: center;
+   display: flex;
+   justify-content: space-between;
+   padding: 8px 0px 8px 0px;
+   margin: 6px;
+   border-bottom: 1.5px solid rgba(0, 0, 0, 0.1);
+}
+.search-item-header-title {
+   flex: 1;
+   color: #333;
+   font-weight: 700;
+}
+.search-item-header-link {
+   -webkit-tap-highlight-color: transparent;
+   text-decoration: none;
+   color: #0000008a;
+   background-color: transparent;
+   transition: color ease-in-out 200ms;
+   &:hover {
+      color: var(--primary-color);
+   }
+}
+.header-search {
+   border-radius: 8px;
+   height: 40px;
+   padding: 0 25px 0 8px;
+   transition: border-color 0.2s ease-in-out;
+   align-items: center;
+   display: flex;
+   justify-content: center;
+   background-color: rgb(239, 239, 239);
+   position: relative;
+   overflow: hidden;
+   .header-search-icon {
+      outline: none;
+      border: none;
+      background-color: transparent;
+      font-size: 1.7rem;
+      margin: 0 0 0 8px;
+      color: #444;
+      opacity: 0.7;
+      transition: opacity 0.2s ease-in-out;
+
+      transition: opacity ease-in-out 200ms;
+      &:hover {
+         opacity: 1;
+      }
+   }
+   input {
+      flex: 1;
+      border: none;
+      caret-color: #444;
+      background-color: rgb(239, 239, 239);
+      height: 100%;
+      outline: none;
+      padding: 0 10px;
+      overflow: visible;
+      font-size: 100%;
+      line-height: 1.15;
+      margin: 0;
+      &::selection {
+         background-color: var(--primary-color);
+         color: #fff;
+      }
+   }
+
+   .header-search-clear {
+      display: block;
+      outline: none;
+      border: none;
+      background-color: transparent;
+      color: #444;
+      cursor: pointer;
+      font-size: 1.4rem;
+      opacity: 0.7;
+      transition: opacity 0.2s ease-in-out;
+      position: absolute;
+      z-index: 21;
+      right: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+
+      transition: opacity ease-in-out 200ms;
+      &:hover {
+         opacity: 1;
+      }
+   }
+   &:focus-within {
+      border-color: #444;
+   }
+}
+.wrapper-link {
+   align-items: center;
+   display: flex;
+   padding: 6px 6px;
+   -webkit-tap-highlight-color: transparent;
+   text-decoration: none;
+   background-color: transparent;
+
+   transition: background-color ease-in-out 200ms;
+   &:hover {
+      background-color: rgba($color: #000000, $alpha: 0.05);
+      border-radius: 6px;
+   }
+}
+.img {
+   border-radius: 50%;
+   width: 32px;
+   height: 32px;
+   object-fit: cover;
+   align-items: center;
+}
+
+.info {
+   word-wrap: break-word;
+   -webkit-box-orient: vertical;
+   -webkit-line-clamp: 2;
+   color: #292929;
+   display: -webkit-box;
+   font-size: 1.4rem;
+   font-weight: 500;
+   line-height: 1.6;
+   margin-left: 12px;
+   overflow: hidden;
+   flex: 1;
+}
+
+.skeleton {
+   background-color: transparent;
+   position: absolute;
+   z-index: 9999999;
+   top: -15px;
+   left: -20px;
+   right: -20px;
+   bottom: -15px;
+   background-image: linear-gradient(90deg, rgba(#ebebeb, 0), rgba(#ebebeb, 0.5), rgba(#ebebeb, 0));
+   background-size: 60px 100%;
+   background-repeat: no-repeat;
+   background-position: left -40px top 0;
+   animation: shine 1s ease infinite;
+}
+
+@keyframes shine {
+   to {
+      background-position: right -40px top 0;
+   }
+}

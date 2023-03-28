@@ -1,0 +1,116 @@
+.card {
+    padding: 15px;
+    margin-bottom: 20px;
+    width: 100%;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    border-radius: 8px;
+    background: linear-gradient(to top right, #ffccff 0%, #ccffcc 100%);
+    &:hover{
+        background: linear-gradient(to top right, #66ff99 0%, #ff99cc 100%);
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+    }
+    &:hover .image{
+        transform: scale(1.2);
+        -webkit-transform: scale(1.2);
+    }
+    transition: all .4s linear;
+}
+.box{
+    width: 100%;
+    height: 150px;
+    border-radius: 6px;
+    overflow: hidden;
+}
+.image {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 6px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+    &:hover .button{ 
+        display: block;
+        animation: fadeInTop 0.3s ease;
+    }
+    &:hover .bg-color{
+        display: block;
+    }
+}
+.bg-color{
+    position: absolute;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+.button{
+    display: none;
+    position: absolute;
+    padding: 6px 24px;
+    transform: translate(-50%, -50%);
+    top:50%;
+    left: 50%;
+    z-index: 3;
+    background-color: #fff;
+    color: #00008B;
+    border-radius: 50px;
+    font-size: 1.3rem;
+    font-weight: 700;
+    &:hover{
+        background-color:#00008B;
+        color:  #fff;
+    }
+}
+.date {
+    display: flex;
+    font-size: 1.3rem;
+    align-items: center;
+    margin-top: 4px;
+    color: #444;
+    line-height: 1.3;
+}
+.author {
+    display: flex;
+    font-size: 1.3rem;
+    align-items: center;
+    color: #444;
+    line-height: 1.3;
+}
+  
+.title {
+    display: flex;
+    font-size: 1.8rem;
+    line-height: 1.3;
+    margin-top: 4px;
+    color: #00008B;
+    font-weight: 700;
+    height: 50px;
+    align-items: center;
+    padding-bottom: 5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+           line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+@keyframes fadeInTop {
+    from {
+       opacity: 0;
+       transform: translate(-50%, 0);
+    }
+    to {
+       opacity: 1;
+       transform: translateY(-50%, -50%);
+    }
+ }
+.ratting{
+    display: flex;
+    align-items: center;
+}

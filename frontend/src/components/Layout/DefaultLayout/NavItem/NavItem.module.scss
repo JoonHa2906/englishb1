@@ -1,0 +1,220 @@
+.nav-s, .nav-plus-s{
+    --nav-border-radius: 8px;
+    --nav-height-width: 50px;
+    --nav-font-size-icon: 1.7rem;
+    --nav-font-size-text: 0.9rem;
+}
+.nav-m, .nav-plus-m{
+    --nav-border-radius: 9px;
+    --nav-height-width: 60px;
+    --nav-font-size-icon: 1.8rem;
+    --nav-font-size-text: 1rem;
+}
+.nav-l, .nav-plus-l{
+    --nav-border-radius: 16px;
+    --nav-height-width: 72px;
+    --nav-font-size-icon: 2rem;
+    --nav-font-size-text: 1.1rem;
+}
+.nav-plus-s, .nav-plus-m, .nav-plus-l{
+   position: relative;
+}
+.sidebar-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    margin: 2px;
+
+    background-color: #fff;
+    color: #404040;
+    border-radius: var(--nav-border-radius);
+    
+    cursor: pointer;
+    height: var(--nav-height-width);
+    width: var(--nav-height-width);
+
+    &:not(.active):hover .sidebar-item-icon, &:hover .logo, &:hover .img {
+       transform: scale(1.2);
+    }
+    &:not(.active):hover {
+       background-color: #f0f0f0;
+    }
+    
+    &.active {
+        color: #fff;
+        background-color: #0d0db3;
+        cursor: default;
+    }
+    transition: all 0.3s ease-in-out;
+}
+  
+.sidebar-item-icon {
+    font-size: var(--nav-font-size-icon);
+}
+  
+.sidebar-item-title {
+    font-size: var(--nav-font-size-text);
+    font-weight: 600;
+}
+.logo, .img{
+    flex-shrink: 0;
+    height: 25px;
+    object-fit: contain;
+    width: 25px;
+    border-style: none;
+}
+.img{
+    border-radius: 50%;
+}
+//search
+.search{
+    position: absolute;
+    top: 0;
+    left: 70px;
+    width: 450px;
+    height: 100%;
+    background-color: #fff;
+    z-index: 5;
+    padding-top: 20px;
+    border-right: 1px solid #bbb;
+    animation: fadeInLeft .3s ease;
+    border-top-right-radius: 16px;
+    border-bottom-right-radius: 16px;
+    .inner{
+       display: flex;
+       justify-content: center;
+    }
+    .title{
+       margin: 5px 0px 8px 20px;
+    }
+ }
+ .fiction{
+    position: relative;
+ }
+ .fiction-item{
+    position: absolute;
+    top: 0;
+    left: 0;
+    align-items: center;
+    border-radius: var(--nav-border-radius);
+    z-index: 12;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    height: var(--nav-height-width);
+    justify-content: center;
+    width: var(--nav-height-width);
+    transition: background-color color ease-in-out 200ms;
+    border: 1px solid #fff;
+    color: #0d0db3;
+    background-color: #fff;
+    &:hover {
+       background-color: #f0f0f0;
+    }
+ }
+
+.plus-up{
+   position: absolute;
+   bottom: calc(100% + 4px);
+   left: 0px;
+   font-size: 1.7rem;
+   flex-direction: column;
+   align-items:flex-start;
+   display: flex;
+   min-width: 140px;
+   background-color: #fff;
+   z-index: 15;
+   animation: fadeInTop .3s ease;
+   border-radius: 6px;
+   box-shadow: 0 -4px 32px rgb(0 0 0 / .7);
+   overflow: hidden;
+   color: #404040;
+}
+
+//Down
+.plus-down{
+   position: absolute;
+   top: calc(100% + 6px);
+   right: 0;
+   font-size: 1.7rem;
+   flex-direction: column;
+   align-items:flex-start;
+   display: flex;
+   min-width: 140px;
+   background-color: #fff;
+   z-index: 15;
+   animation: fadeInBottom .3s ease;
+   border-radius: 6px;
+   box-shadow: 0 -4px 32px rgb(0 0 0 / .7);
+   overflow: hidden;
+   color: #404040;
+}
+.link-item{
+   display: flex;
+   align-items: center;
+   padding: 8px 20px;
+   width: 100%;
+   line-height: 1.8;
+   
+   &:hover .icon, &:hover .img{
+      transform: scale(1.2);
+   }
+   &:hover{
+      background-color: #f0f0f0;
+   }
+   transition: all 0.3s ease-in-out;
+   .img{
+      flex-shrink: 0;
+      height: 17px;
+      object-fit: contain;
+      width: 17px;
+      border-style: none;
+      border-radius: 50%;
+  }
+   
+     .icon, .img{
+      margin-right: 8px;
+      font-size: 1.7rem;
+      color: #404040;
+     }
+     .title{
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #404040;
+     }
+}
+
+@keyframes fadeInBottom {
+  from {
+     opacity: 0;
+     transform: translateY(-10px);
+  }
+  to {
+     opacity: 1;
+     transform: translateY(0);
+  }
+}
+
+@keyframes fadeInTop {
+   from {
+      opacity: 0;
+      transform: translateY(10px);
+   }
+   to {
+      opacity: 1;
+      transform: translateY(0);
+   }
+ }
+ 
+ @keyframes fadeInLeft {
+   from {
+      opacity: 0;
+      transform: translateX(-15px);
+   }
+   to {
+      opacity: 1;
+      transform: translateX(0);
+   }
+}

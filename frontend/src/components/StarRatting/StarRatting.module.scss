@@ -1,0 +1,21 @@
+.content {
+   background-color: transparent;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   font-size: 1.2rem;
+   .reviews {
+      font-size: 1.3rem;
+      padding-left: 8px;
+      color: #333;
+   }
+}
+
+.content-none {
+   background-color: transparent;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   font-size: 1.2rem;
+   width: 80px;
+}

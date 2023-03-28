@@ -1,0 +1,15 @@
+.body {
+   display: flex;
+   .content {
+      flex: 1;
+      background-color: white;
+      margin-bottom: 60px;
+      padding-top: 20px;
+   }
+   
+   @media (min-width: 992px) {
+      .content{
+         margin-top: 66px;
+      }
+   }
+}

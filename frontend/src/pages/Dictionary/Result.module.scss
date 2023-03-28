@@ -1,0 +1,115 @@
+.result {
+  list-style: none;
+  display: block;
+  width: 100%;
+  padding: 20px 0px;
+}
+
+.word{
+  display: block;
+}
+
+.title {
+  color: #00008B;
+  margin-bottom: 10px;
+  font-size: 2.8rem;
+}
+
+.audio{
+  margin: 8px 0;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.audio-icon{
+  padding: 6px 12px;
+  background-color: #F75D59;
+  cursor: pointer;
+  border-radius: 5px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  &:hover{
+    opacity: 0.8;
+  }
+  .audio-lang{
+    margin-left: 6px;
+    font-weight: 700;
+  }
+}
+.audio-icon.UK{
+  background-color: #008080;
+}
+
+.audio-icon.US{
+  background-color: #004225;
+}
+
+.audio-icon.AU{
+  background-color: #F75D59;
+}
+
+.audio-icon.GG{
+  background-color: #F6BE00;
+}
+
+.audio-content{
+  font-family: "Lucida Sans Unicode", "Lucida Grande";
+  margin-left: 8px;
+}
+.contain {
+  margin-top: 7px;
+}
+.partOfSpeech{
+  color: #00008B;
+  margin: 24px 0px 4px;
+  font-size: 2rem;
+}
+
+.details {
+   border: 1px solid #bde0fe;
+   border-left: 3px solid #8093f1;
+   border-radius: 5px;
+   padding: 0px 16px 20px;
+   color: #333;
+   font-weight: 500;
+}
+.titleH4{
+  color: #C34A2C;
+  font-size: 1.7rem;
+  margin: 16px 0px 2px;
+}
+
+.details p {
+   font-size: 1.5rem;
+   padding: 3px 0px;
+}
+ 
+.synonyms {
+  padding: 4px 12px;
+  margin: 3px 6px 3px 0px;
+  border-radius: 4px;
+  background: #faded7;
+  color: #222;
+  cursor: pointer;
+  font-size: 1.6rem;
+  opacity: .8;
+  display: inline-block;
+ }
+ 
+.synonyms:hover {
+   opacity: 1;
+ }
+.toggle{
+  padding: 9px 16px;
+  border-left: 4px solid #8bf06e;
+  background-color: #defad7;
+  cursor: pointer;
+}
+ .hide{
+  padding: 12px 16px;
+  background-color: #fdf3f0;
+  border-left: 4px solid #f08b6e;
+  display: none;
+ }

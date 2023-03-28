@@ -1,0 +1,111 @@
+.rating{
+    margin: 26px 0;
+}
+.rate{
+    background-color: transparent;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    .average{
+        background-color: transparent;
+        display: flex;
+        font-size: 1.8rem;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 2.2rem;
+        width: 150px;
+    }
+    .reviews{
+        font-size: 1.7rem;
+        color: #333;
+        margin-top: 8px;
+        font-weight: 600;
+    }
+}
+.your-review-title{
+    font-size: 1.7rem;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    margin-top: 8px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.login{
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: blue;
+}
+.your-rate-title{
+    font-size: 2rem;
+    font-weight: 700;
+    color:crimson;
+    margin: 18px 0 0;
+    text-align: center;
+}
+.your-score{
+    align-items: center;
+    display: flex;
+    margin: 12px 0;
+}
+.title-item{
+    display: flex;
+    margin-right: 8px;
+}
+.your-rate-icon{
+    background-color: transparent;
+    display: flex;
+    font-size: 1.8rem;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 2.2rem;
+    width: 150px;
+    color: #555;
+}
+.active{
+    color: #ffb40b;
+}
+.hover{
+    cursor: pointer;
+    color: #aa7804;
+}
+.area-comment{
+    width: 100%;
+    border: 2px solid #333;
+    font-size: 1.6rem;
+    padding: 8px 16px;
+    margin-top: 8px;
+}
+.submit{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 8px;
+}
+.btn-submit{
+    padding: 6px 18px;
+    background-color: darkgreen;
+    font-size: 1.8rem;
+    border-radius: 8px;
+    font-weight: 700;
+    color: #fff;
+    border: 3px solid darkgreen;
+    cursor: pointer;
+    &:hover{
+        background-color: #fff;
+        color: darkgreen;
+    }
+}
+.list-reviews{
+    width: 100%;
+}
+.list-reviews-title{
+    margin: 12px 0 6px;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: crimson;
+}
